@@ -1,0 +1,6 @@
+{
+  "name": "INGRELIA Ingredients Pvt. Ltd.",
+  "description": "Speciality personal-care ingredients distribution and market development company connecting global ingredient manufacturers with Indian cosmetics and personal-care brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

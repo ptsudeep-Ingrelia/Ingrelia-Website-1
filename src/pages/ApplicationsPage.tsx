@@ -24,7 +24,7 @@ export const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
           INGRELIA delivers targeted speciality raw materials engineered to address the specific performance,
-          stability, and sensory requirements across seven core personal-care and cosmetic application sectors in India.
+          stability, and sensory requirements across seven core personal-care and cosmetic application areas in India.
         </p>
       </div>
 
@@ -41,15 +41,6 @@ export const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
             >
               {/* Content (7 cols) */}
               <div className="lg:col-span-7 space-y-5">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono font-bold text-[#009999]">
-                    0{index + 1}.
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Application Sector
-                  </span>
-                </div>
-
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight">
                     {app.title}

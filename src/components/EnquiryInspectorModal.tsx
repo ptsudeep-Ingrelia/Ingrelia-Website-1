@@ -133,7 +133,7 @@ export const EnquiryInspectorModal: React.FC<EnquiryInspectorModalProps> = ({
                       <div>
                         <span className="text-[10px] text-slate-400 block">Categories</span>
                         <span className="truncate block font-medium text-[#009999]">
-                          {enq.payload.ingredientCategoriesOfInterest.join(', ')}
+                          {enq.payload.ingredientCategoriesOfInterest?.join(', ') || 'N/A'}
                         </span>
                       </div>
                     </div>

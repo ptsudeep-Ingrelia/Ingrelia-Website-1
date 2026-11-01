@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo } from './Logo';
 import { PageId } from './Navbar';
 import { COMPANY_DETAILS, APPLICATION_AREAS } from '../data/companyData';
-import { MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, Phone, Globe, ArrowUpRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -153,6 +153,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
                   {COMPANY_DETAILS.phone}
                 </a>
               </div>
+              <div className="flex items-center gap-2.5">
+                <Globe className="w-4 h-4 text-[#009999] shrink-0" />
+                <a
+                  href={COMPANY_DETAILS.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {COMPANY_DETAILS.website}
+                </a>
+              </div>
             </div>
 
             <div className="pt-2">
@@ -172,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
             © {currentYear} {COMPANY_DETAILS.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[11px] text-slate-400">
-            <span>Mumbai, India</span>
+            <span>Thane, Maharashtra, India</span>
           </div>
         </div>
       </div>

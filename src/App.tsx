@@ -147,16 +147,6 @@ export default function App() {
           <MessageSquare className="w-4 h-4 text-white" />
           <span className="hidden sm:inline">WhatsApp Enquiry</span>
         </a>
-
-        {/* Queue Inspector Discrete Trigger */}
-        <button
-          onClick={() => setIsInspectorOpen(true)}
-          className="pointer-events-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#102743]/90 hover:bg-[#102743] text-white/90 text-[10px] font-medium tracking-wider uppercase shadow-md transition-all cursor-pointer"
-          title="Inspect Form Dispatch Queue & API Payloads"
-        >
-          <ShieldCheck className="w-3.5 h-3.5 text-[#00b3b3]" />
-          <span>Queue Inspector</span>
-        </button>
       </div>
     </div>
   );

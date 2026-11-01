@@ -37,20 +37,20 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
       aria-labelledby="enquiry-modal-title"
     >
       <div
-        className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 p-6 sm:p-8 animate-in zoom-in-95 duration-200"
+        className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 p-6 sm:p-7 animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-start justify-between pb-4 border-b border-slate-100 mb-5">
+        <div className="flex items-start justify-between pb-3.5 border-b border-slate-100 mb-4">
           <div className="text-left">
             <span className="text-[11px] font-bold tracking-widest text-[#009999] uppercase">
-              Formulation & Ingredient Inquiries
+              Quick Inquiry Desk
             </span>
-            <h2 id="enquiry-modal-title" className="text-xl sm:text-2xl font-bold text-[#102743]">
+            <h2 id="enquiry-modal-title" className="text-lg sm:text-xl font-bold text-[#102743]">
               Discuss Your Requirements
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
-              Connect with INGRELIA’s technical and commercial specialists for personal-care solutions.
+              Connect with INGRELIA’s technical specialists for personal-care ingredient solutions.
             </p>
           </div>
           <button
@@ -62,7 +62,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
           </button>
         </div>
 
-        {/* 10-Field Customer Enquiry Form */}
+        {/* Customer Enquiry Form */}
         <CustomerEnquiryForm
           initialApplication={initialApplication}
           initialCategory={initialCategory}

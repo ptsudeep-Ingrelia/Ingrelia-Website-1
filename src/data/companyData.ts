@@ -24,10 +24,11 @@ export interface SolutionPillar {
   subtitle: string;
   description: string;
   keyAspects: string[];
+  image: string;
 }
 
 export const COMPANY_DETAILS = {
-  name: 'INGRELIA Ingredients Pvt. Ltd.',
+  name: 'INGRELIA',
   legalName: 'INGRELIA Ingredients Private Limited',
   positioning: 'Your Personal Care Ingredients Partner',
   tagline: 'Ingredients that inspire better formulations.',
@@ -42,7 +43,9 @@ export const COMPANY_DETAILS = {
     'To support personal-care and cosmetic manufacturers through deep customer understanding, reliable ingredient sourcing, responsive business coordination and dependable long-term relationships.',
   email: 'sales@ingrelia.in',
   phone: '+91 9820300401',
-  address: 'Corporate Centre, Andheri East, Mumbai, Maharashtra 400069, India',
+  website: 'www.ingrelia.in',
+  websiteUrl: 'https://www.ingrelia.in',
+  address: '1st Floor, 53, Cine Wonder Complex, Thane, Maharashtra, 400607, India',
   linkedin: 'https://linkedin.com/company/ingrelia-ingredients',
   whatsapp: '919820300401',
 };
@@ -65,7 +68,7 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
     description:
       'Mild, sulfate-free, bio-derived, and amphoteric surfactant architectures delivering rich foam quality, gentle dermatological compatibility, and rinse-off performance.',
     commonApplications: ['Hair Care', 'Toiletries', 'Personal Hygiene', 'Skin Care'],
-    image: '/src/assets/images/category_surfactants_1793457559534.jpg',
+    image: '/src/assets/images/cat_surfactants_authentic_1793520849739.jpg',
   },
   {
     id: 'actives',
@@ -74,7 +77,7 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
     description:
       'Substantiated botanical extracts, peptide complexes, biotechnological actives, and cellular nutrients delivering verifiable claims for contemporary personal care.',
     commonApplications: ['Skin Care', 'Hair Care', 'Sun Care', 'Body Care'],
-    image: '/src/assets/images/category_actives_1793457539811.jpg',
+    image: '/src/assets/images/cat_actives_authentic_1793520861940.jpg',
   },
   {
     id: 'uv-filters',
@@ -83,7 +86,7 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
     description:
       'Broad-spectrum organic and inorganic photoprotective technologies engineered for high UVA/UVB absorption efficiency, photostability, and cosmetic elegance.',
     commonApplications: ['Sun Care', 'Skin Care', 'Colour Cosmetics'],
-    image: '/src/assets/images/category_uv_filters_1793457560329.jpg',
+    image: '/src/assets/images/cat_uv_filters_authentic_1793520874381.jpg',
   },
   {
     id: 'preservatives',
@@ -92,7 +95,7 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
     description:
       'Modern, globally compliant antimicrobial systems, multifunctional preservation boosters, and clean-beauty preservation solutions ensuring product safety and stability.',
     commonApplications: ['Skin Care', 'Hair Care', 'Toiletries', 'Personal Hygiene'],
-    image: '/src/assets/images/category_preservatives_1793457560148.jpg',
+    image: '/src/assets/images/cat_preservatives_authentic_1793520886708.jpg',
   },
   {
     id: 'functional-ingredients',
@@ -101,7 +104,7 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
     description:
       'Rheology modifiers, polymeric thickeners, sensory texturizers, solubilizers, and formulation stabilizers that define product viscosity, crystal clarity, and touch.',
     commonApplications: ['Skin Care', 'Hair Care', 'Colour Cosmetics', 'Body Care'],
-    image: '/src/assets/images/category_functional_1793457561489.jpg',
+    image: '/src/assets/images/cat_functional_authentic_1793520899158.jpg',
   },
 ];
 
@@ -263,6 +266,7 @@ export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
       'Alignment with target regulatory and clean-label standards',
       'Evaluation of dependable supply continuity for Indian manufacturing batches',
     ],
+    image: '/src/assets/images/ing_sourcing_nature_1793520263299.jpg',
   },
   {
     id: 'formulation-requirements',
@@ -276,6 +280,7 @@ export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
       'Addressing emulsion stability, viscosity, and sensory texture hurdles',
       'Advising on optimal usage percentages and phase incorporation methods',
     ],
+    image: '/src/assets/images/formulation_texture_1793520264573.jpg',
   },
   {
     id: 'product-evaluation',
@@ -289,6 +294,7 @@ export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
       'Technical documentation including Certificates of Analysis (COA) and specifications',
       'Responsive coordination during sensory and performance trials',
     ],
+    image: '/src/assets/images/product_eval_skin_1793520265999.jpg',
   },
   {
     id: 'business-coordination',
@@ -302,6 +308,7 @@ export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
       'Proactive order tracking and delivery schedule coordination',
       'Structured communication that respects launch deadlines and production schedules',
     ],
+    image: '/src/assets/images/biz_coordination_corp_1793520266543.jpg',
   },
   {
     id: 'long-term-partnership',
@@ -315,6 +322,7 @@ export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
       'Market-aware suggestions tailored to evolving consumer trends in India',
       'A customer-first philosophy centered on mutual trust and dependable execution',
     ],
+    image: '/src/assets/images/longterm_partner_corp_1793520282800.jpg',
   },
 ];
 

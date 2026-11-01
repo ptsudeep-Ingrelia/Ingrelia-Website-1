@@ -28,7 +28,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
           Your Personal Care Ingredients Partner
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          INGRELIA Ingredients Pvt. Ltd. is an Indian B2B speciality ingredients distribution company
+          INGRELIA is an Indian B2B speciality ingredients distribution company
           dedicated exclusively to the personal-care and cosmetics industry.
         </p>
       </div>
@@ -43,7 +43,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             "{COMPANY_DETAILS.aboutPositioningStatement}"
           </blockquote>
           <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-slate-300">
-            <span className="font-semibold text-white">INGRELIA Ingredients Pvt. Ltd.</span>
+            <span className="font-semibold text-white">INGRELIA</span>
             <span>·</span>
             <span>Customer-Focused Speciality Ingredients Distribution</span>
           </div>
@@ -146,34 +146,64 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl bg-[#F5F7F9] border border-slate-200 space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 text-[#009999] flex items-center justify-center">
-              <Sparkles className="w-5 h-5" />
+          {/* 1. Technical Alignment */}
+          <div className="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/50 transition-all flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="/src/assets/images/technical_alignment_clean_1793523276151.jpg"
+                  alt="Technical Alignment - Formulation texture evaluation and skin feel benchmarks"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-6 space-y-2 text-left">
+                <h3 className="text-base font-bold text-[#102743]">Technical Alignment</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  We converse directly with chemists, formulators, and founders, ensuring that ingredient discussions focus on technical parameters, skin feel, and stability requirements.
+                </p>
+              </div>
             </div>
-            <h3 className="text-base font-bold text-[#102743]">Technical Alignment</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              We converse directly with chemists, formulators, and founders, ensuring that ingredient discussions focus on technical parameters, skin feel, and stability requirements.
-            </p>
           </div>
 
-          <div className="p-6 rounded-xl bg-[#F5F7F9] border border-slate-200 space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 text-[#009999] flex items-center justify-center">
-              <Users2 className="w-5 h-5" />
+          {/* 2. Customer-First Mindset */}
+          <div className="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/50 transition-all flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="/src/assets/images/customer_first_setup_1793523387065.jpg"
+                  alt="Customer-First Mindset - Client formulation brief notebook, ingredient specification sheet, and cosmetic oil samples"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-6 space-y-2 text-left">
+                <h3 className="text-base font-bold text-[#102743]">Customer-First Mindset</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Your formulation success is our top benchmark. We advise with commercial transparency, realistic timelines, and consistent sample follow-through.
+                </p>
+              </div>
             </div>
-            <h3 className="text-base font-bold text-[#102743]">Customer-First Mindset</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Your formulation success is our top benchmark. We advise with commercial transparency, realistic timelines, and consistent sample follow-through.
-            </p>
           </div>
 
-          <div className="p-6 rounded-xl bg-[#F5F7F9] border border-slate-200 space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 text-[#009999] flex items-center justify-center">
-              <HeartHandshake className="w-5 h-5" />
+          {/* 3. Enduring Partnership */}
+          <div className="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/50 transition-all flex flex-col justify-between">
+            <div>
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="/src/assets/images/enduring_partnership_folio_1793523387341.jpg"
+                  alt="Enduring Partnership - Corporate partnership agreement folio and premium cosmetic product portfolio"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-6 space-y-2 text-left">
+                <h3 className="text-base font-bold text-[#102743]">Enduring Partnership</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  We aim to remain your preferred ingredient partner across multiple product launches, range refreshes, and long-term brand expansions.
+                </p>
+              </div>
             </div>
-            <h3 className="text-base font-bold text-[#102743]">Enduring Partnership</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              We aim to remain your preferred ingredient partner across multiple product launches, range refreshes, and long-term brand expansions.
-            </p>
           </div>
         </div>
       </div>

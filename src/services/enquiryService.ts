@@ -1,15 +1,15 @@
 export interface CustomerEnquiryPayload {
   id?: string;
   name: string;
-  companyName: string;
-  designation: string;
+  companyName?: string;
+  designation?: string;
   businessEmail: string;
-  contactNumber: string;
-  industrySegment: string;
-  applicationOfInterest: string;
-  ingredientCategoriesOfInterest: string[];
-  requirementDetails: string;
-  message: string;
+  contactNumber?: string;
+  industrySegment?: string;
+  applicationOfInterest?: string;
+  ingredientCategoriesOfInterest?: string[];
+  requirementDetails?: string;
+  message?: string;
   timestamp?: string;
   honeypot?: string; // Bot spam mitigation
 }
@@ -42,39 +42,38 @@ export async function submitCustomerEnquiry(
     throw new Error('Automated bot submission detected.');
   }
 
-  // 2. Comprehensive field validations
+  // 2. Streamlined validations for simple & fast customer enquiry
   if (!payload.name?.trim()) {
-    throw new Error('Please enter your full name.');
-  }
-  if (!payload.companyName?.trim()) {
-    throw new Error('Please enter your company or brand name.');
-  }
-  if (!payload.designation?.trim()) {
-    throw new Error('Please enter your professional designation.');
+    throw new Error('Please enter your name.');
   }
   if (!payload.businessEmail?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.businessEmail)) {
-    throw new Error('Please enter a valid business email address.');
-  }
-  if (!payload.contactNumber?.trim() || payload.contactNumber.length < 7) {
-    throw new Error('Please enter a valid contact phone number.');
-  }
-  if (!payload.industrySegment?.trim()) {
-    throw new Error('Please select your industry segment.');
-  }
-  if (!payload.applicationOfInterest?.trim()) {
-    throw new Error('Please select an application area of interest.');
-  }
-  if (
-    !payload.ingredientCategoriesOfInterest ||
-    payload.ingredientCategoriesOfInterest.length === 0
-  ) {
-    throw new Error('Please select at least one ingredient category of interest.');
-  }
-  if (!payload.requirementDetails?.trim() || payload.requirementDetails.length < 5) {
-    throw new Error('Please describe your requirement details (e.g., target sensory feel, volume, benchmark).');
+    throw new Error('Please enter a valid email address.');
   }
 
-  // 3. Generate enterprise business reference number
+  const queryText = (payload.requirementDetails || payload.message || '').trim();
+  if (queryText.length < 3) {
+    throw new Error('Please share a brief note about your requirement.');
+  }
+
+  // 3. Fallbacks for optional fields
+  const normalizedPayload: CustomerEnquiryPayload = {
+    ...payload,
+    name: payload.name.trim(),
+    businessEmail: payload.businessEmail.trim(),
+    companyName: payload.companyName?.trim() || 'Not specified',
+    contactNumber: payload.contactNumber?.trim() || '-',
+    designation: payload.designation?.trim() || 'Formulator / Brand Representative',
+    industrySegment: payload.industrySegment?.trim() || 'Personal Care & Cosmetics',
+    applicationOfInterest: payload.applicationOfInterest?.trim() || 'General Formulation Support',
+    ingredientCategoriesOfInterest:
+      payload.ingredientCategoriesOfInterest && payload.ingredientCategoriesOfInterest.length > 0
+        ? payload.ingredientCategoriesOfInterest
+        : ['Speciality Ingredients'],
+    requirementDetails: queryText,
+    message: payload.message?.trim() || '',
+  };
+
+  // 4. Generate enterprise business reference number
   const randomSuffix = Math.floor(1000 + Math.random() * 9000);
   const referenceNumber = `ING-REQ-${new Date().getFullYear()}-${randomSuffix}`;
   const timestamp = new Date().toISOString();
@@ -86,14 +85,14 @@ export async function submitCustomerEnquiry(
       'Enquiry recorded in local business queue. Integration-ready for CRM / ERP webhook dispatch.',
     timestamp,
     payload: {
-      ...payload,
+      ...normalizedPayload,
       id: referenceNumber,
       timestamp,
     },
     integrationTarget: 'POST /api/enquiries/customer',
   };
 
-  // 4. Save to client business queue
+  // 5. Save to client business queue
   try {
     const existing = getStoredCustomerEnquiries();
     existing.unshift(record);
@@ -113,9 +112,9 @@ export function generateEnquiryReceiptText(result: EnquirySubmissionResult): str
   return `=====================================================
 INGRELIA INGREDIENTS PVT. LTD.
 B2B Speciality Personal Care Ingredients Distribution
-Mumbai, Maharashtra, India
+Thane, Maharashtra, 400607, India
 Official Email: sales@ingrelia.in
-Website: www.ingrelia.com
+Website: www.ingrelia.in
 =====================================================
 CUSTOMER ENQUIRY ACKNOWLEDGEMENT
 Reference Number: ${result.referenceNumber}
@@ -132,7 +131,7 @@ Industry Segment: ${p.industrySegment}
 
 FORMULATION REQUIREMENT:
 Application of Interest: ${p.applicationOfInterest}
-Ingredient Categories: ${p.ingredientCategoriesOfInterest.join(', ')}
+Ingredient Categories: ${p.ingredientCategoriesOfInterest?.join(', ') || 'Speciality Ingredients'}
 
 REQUIREMENT DETAILS:
 ${p.requirementDetails}

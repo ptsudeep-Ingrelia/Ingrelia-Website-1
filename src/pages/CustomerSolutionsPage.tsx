@@ -7,15 +7,12 @@ import {
 } from '../data/companyData';
 import {
   ArrowRight,
-  ShieldCheck,
   Check,
   Sparkles,
   Search,
   FlaskConical,
   Clock,
   HeartHandshake,
-  ChevronRight,
-  Layers,
 } from 'lucide-react';
 
 interface CustomerSolutionsPageProps {
@@ -61,46 +58,66 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {CUSTOMER_SOLUTIONS_PILLARS.map((pillar, index) => {
             const Icon = pillarIcons[index] || Sparkles;
             return (
               <div
                 key={pillar.id}
-                className="bg-white rounded-2xl border border-slate-200 p-8 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-6"
+                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-[#009999]/10 text-[#009999] flex items-center justify-center">
-                      <Icon className="w-6 h-6" />
+                <div>
+                  {/* Authentic AI Image Header */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102743]/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4">
+                      <div className="w-9 h-9 rounded-lg bg-[#009999]/90 text-white flex items-center justify-center shadow-sm backdrop-blur-xs">
+                        <Icon className="w-4 h-4" />
+                      </div>
                     </div>
-                    <span className="text-xs font-mono font-bold text-slate-400">
-                      Step {pillar.stepNumber}
-                    </span>
                   </div>
 
-                  <div>
-                    <h3 className="text-xl font-bold text-[#102743]">{pillar.title}</h3>
-                    <p className="text-xs font-medium text-[#009999] mt-0.5">{pillar.subtitle}</p>
-                  </div>
+                  {/* Pillar Content */}
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-[#102743]">{pillar.title}</h3>
+                      <p className="text-xs font-medium text-[#009999] mt-1">{pillar.subtitle}</p>
+                    </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {pillar.description}
-                  </p>
-
-                  <div className="pt-3 border-t border-slate-100 space-y-2">
-                    <p className="text-[10px] font-bold text-[#102743] uppercase tracking-wider">
-                      Key Highlights
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {pillar.description}
                     </p>
-                    <ul className="space-y-2 text-xs text-slate-600">
-                      {pillar.keyAspects.map((aspect) => (
-                        <li key={aspect} className="flex items-start gap-2">
-                          <Check className="w-3.5 h-3.5 text-[#009999] shrink-0 mt-0.5" />
-                          <span>{aspect}</span>
-                        </li>
-                      ))}
-                    </ul>
+
+                    <div className="pt-3 border-t border-slate-100 space-y-2">
+                      <p className="text-[10px] font-bold text-[#102743] uppercase tracking-wider">
+                        Key Highlights
+                      </p>
+                      <ul className="space-y-2 text-xs text-slate-600">
+                        {pillar.keyAspects.map((aspect) => (
+                          <li key={aspect} className="flex items-start gap-2">
+                            <Check className="w-3.5 h-3.5 text-[#009999] shrink-0 mt-0.5" />
+                            <span>{aspect}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
+                </div>
+
+                <div className="px-6 pb-6 pt-1">
+                  <button
+                    onClick={() => onOpenConnectModal(undefined, pillar.title)}
+                    className="w-full py-2.5 px-3 rounded-lg border border-slate-200 hover:border-[#102743] hover:bg-[#102743] hover:text-white text-[#102743] text-xs font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Connect for {pillar.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#009999]" />
+                  </button>
                 </div>
               </div>
             );
@@ -144,11 +161,8 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#102743]/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#102743]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#00b3b3]">
-                      Category 0{idx + 1}
-                    </span>
                     <h3 className="text-base font-bold text-white tracking-wide">{cat.title}</h3>
                   </div>
                 </div>
@@ -186,19 +200,6 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Regulatory & B2B Notice */}
-        <div className="p-5 rounded-xl bg-[#F5F7F9] border border-slate-200 text-xs text-slate-600 flex items-start gap-3">
-          <ShieldCheck className="w-5 h-5 text-[#009999] shrink-0 mt-0.5" />
-          <div>
-            <p className="font-semibold text-[#102743]">B2B Direct Consultation Model</p>
-            <p className="mt-0.5">
-              In accordance with our strict distribution policy, we do not publish individual product codes,
-              prices, or supplier dossiers publicly. Technical data sheets (TDS) and Certificates of Analysis (COA)
-              are shared during direct project evaluation.
-            </p>
-          </div>
         </div>
       </div>
 

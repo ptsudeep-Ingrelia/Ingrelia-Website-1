@@ -29,8 +29,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-                Connecting Indian cosmetic brands and formulators with high-performance speciality raw
-                materials, technical clarity, and dependable batch supply.
+                Connecting India's personal care industry with quality specialty ingredients, global sourcing expertise, and reliable supply solutions.
               </p>
 
               {/* CTAs */}
@@ -51,29 +50,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
-
-              {/* 3 Metrics / Trust Points */}
-              <div className="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-left">
-                <div>
-                  <p className="text-lg sm:text-xl font-bold text-[#102743]">7</p>
-                  <p className="text-xs text-slate-500 font-medium">Personal-Care Areas</p>
-                </div>
-                <div>
-                  <p className="text-lg sm:text-xl font-bold text-[#102743]">6</p>
-                  <p className="text-xs text-slate-500 font-medium">Core Chemistries</p>
-                </div>
-                <div>
-                  <p className="text-lg sm:text-xl font-bold text-[#009999]">Prompt</p>
-                  <p className="text-xs text-slate-500 font-medium">Bench Sampling</p>
-                </div>
-              </div>
             </div>
 
             {/* Right Visual Carrier (5 cols) */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-[4/3] sm:aspect-[16/11]">
                 <img
-                  src="/src/assets/images/hero_ingrelia_formulation_1793459990633.jpg"
+                  src="/assets/images/hero_ingrelia_formulation_1793459990633.jpg"
                   alt="Personal care cosmetic science and active formulation chemistry"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -101,7 +84,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
               Why Formulators Work With Us
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight mt-1">
-              Precision Sourcing for Indian Personal Care
+              Your Partner in Personal Care Innovation
             </h2>
           </div>
           <button
@@ -119,7 +102,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/application_fit_texture_1793522696722.jpg"
+                  src="/assets/images/application_fit_texture_1793522696722.jpg"
                   alt="Application Fit - Cosmetic emulsion texture and botanical actives"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
@@ -139,7 +122,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/product_sampling_clean_1793522991832.jpg"
+                  src="/assets/images/product_sampling_clean_1793522991832.jpg"
                   alt="Product Sampling - Amber dropper bottles and cosmetic sample jars"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
@@ -159,7 +142,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/quality_compliance_docs_1793522849219.jpg"
+                  src="/assets/images/quality_compliance_docs_1793522849219.jpg"
                   alt="Quality & Compliance - Cosmetic regulatory compliance dossier, certification seal, and tamper-sealed QC samples"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
@@ -179,7 +162,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/supply_continuity_dispatch_1793522699569.jpg"
+                  src="/assets/images/supply_continuity_dispatch_1793522699569.jpg"
                   alt="Supply Continuity - Modern organized warehouse dispatching cosmetic ingredients"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
@@ -204,7 +187,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
               Applications We Serve
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight mt-1">
-              Chemistries Engineered for Seven Key Segments
+              Ingredients for Diverse Applications
             </h2>
           </div>
           <button
@@ -262,7 +245,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
               Ingredient Categories
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight mt-1">
-              Six Core Cosmetic Chemistries
+              Our Personal Care Ingredient Portfolio
             </h2>
           </div>
           <button

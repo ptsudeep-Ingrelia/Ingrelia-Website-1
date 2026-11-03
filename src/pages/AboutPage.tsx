@@ -22,30 +22,32 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
       {/* Header */}
       <div className="border-b border-slate-200 pb-10 space-y-4">
         <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
-          About INGRELIA
+          About Ingrelia
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102743] tracking-tight">
-          Your Personal Care Ingredients Partner
+          Connecting Ingredients. Enabling Innovation.
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          INGRELIA is an Indian B2B speciality ingredients distribution company
-          dedicated exclusively to the personal-care and cosmetics industry.
+          At Ingrelia Ingredients Pvt. Ltd., we believe that the right ingredients can make a meaningful difference to the way personal-care products are developed and experienced.
         </p>
       </div>
 
       {/* Suggested Positioning Statement Blockquote */}
       <div className="p-8 sm:p-12 rounded-2xl bg-[#102743] text-white border border-[#18375e] shadow-sm relative overflow-hidden">
-        <div className="max-w-4xl space-y-4">
+        <div className="max-w-4xl space-y-5">
           <span className="text-xs font-bold tracking-widest text-[#00b3b3] uppercase">
-            Our Business Philosophy
+            Our Purpose & Vision
           </span>
           <blockquote className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-slate-100">
-            "{COMPANY_DETAILS.aboutPositioningStatement}"
+            "We are building a specialty ingredients distribution business focused on serving India's personal-care industry with a carefully selected portfolio of ingredients, responsive service and a strong understanding of customer needs."
           </blockquote>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed pt-1">
+            Our focus spans skin care, hair care, sun care and personal hygiene, connecting ingredient manufacturers with the brands, formulators and businesses that turn ideas into finished products.
+          </p>
           <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-slate-300">
-            <span className="font-semibold text-white">INGRELIA</span>
+            <span className="font-semibold text-white">Ingrelia Ingredients Pvt. Ltd.</span>
             <span>·</span>
-            <span>Customer-Focused Speciality Ingredients Distribution</span>
+            <span>Connecting Ingredients. Enabling Innovation.</span>
           </div>
         </div>
       </div>
@@ -57,19 +59,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             Company Overview
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight">
-            Understanding the Formulation Behind Every Product
+            Beyond Ingredients. Understanding Formulations.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            In the rapidly evolving personal-care and beauty landscape, product success depends
-            on far more than acquiring raw material volumes. It begins with a granular understanding
-            of the formulation brief: the target skin feel, stability benchmarks, active claims,
-            processing ease, and consumer price expectations.
+            Creating successful products goes beyond sourcing the right raw materials. It requires a clear understanding of formulation objectives, desired product characteristics, performance expectations, processing requirements and commercial considerations.
           </p>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            INGRELIA was formed with a singular, dedicated purpose: to serve as a knowledgeable,
-            customer-centric distribution partner that listens first, evaluates technical requirements
-            accurately, and coordinates relevant speciality ingredient solutions tailored to Indian
-            formulations.
+            At INGRELIA, we believe that the right ingredient solution begins with understanding the customer's needs. We work closely with manufacturers and formulators to evaluate technical requirements, identify suitable specialty ingredients and develop reliable sourcing solutions that align with their formulation goals.
+          </p>
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Our approach is built on technical understanding, responsible sourcing, quality assurance and dependable supply. We aim to be a knowledgeable, customer-focused distribution partner, bringing together the right ingredients and the right solutions to support our customers' product development and business objectives.
           </p>
         </div>
 
@@ -111,7 +110,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
               Our Vision
             </span>
-            <h3 className="text-lg font-bold text-[#102743]">Trusted & Knowledgeable Partner</h3>
+            <h3 className="text-lg font-bold text-[#102743]">A Trusted Partner in Specialty Ingredients</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
               "{COMPANY_DETAILS.vision}"
             </p>
@@ -126,7 +125,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
               Our Mission
             </span>
-            <h3 className="text-lg font-bold text-[#102743]">Customer-Centric Sourcing & Support</h3>
+            <h3 className="text-lg font-bold text-[#102743]">Delivering Value Through Understanding and Expertise</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
               "{COMPANY_DETAILS.mission}"
             </p>
@@ -141,7 +140,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             Core Values
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#102743]">
-            How We Build Long-Term Customer Relationships
+            The Principles Behind Every Partnership
           </h2>
         </div>
 
@@ -151,7 +150,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/technical_alignment_clean_1793523276151.jpg"
+                  src="/assets/images/technical_alignment_clean_1793523276151.jpg"
                   alt="Technical Alignment - Formulation texture evaluation and skin feel benchmarks"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
@@ -160,47 +159,47 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
               <div className="p-6 space-y-2 text-left">
                 <h3 className="text-base font-bold text-[#102743]">Technical Alignment</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  We converse directly with chemists, formulators, and founders, ensuring that ingredient discussions focus on technical parameters, skin feel, and stability requirements.
+                  Understanding requirements and identifying the right ingredient solutions.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 2. Customer-First Mindset */}
+          {/* 2. Customer-First Approach */}
           <div className="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/50 transition-all flex flex-col justify-between">
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/customer_first_setup_1793523387065.jpg"
-                  alt="Customer-First Mindset - Client formulation brief notebook, ingredient specification sheet, and cosmetic oil samples"
+                  src="/assets/images/customer_first_setup_1793523387065.jpg"
+                  alt="Customer-First Approach - Client formulation brief notebook, ingredient specification sheet, and cosmetic oil samples"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 space-y-2 text-left">
-                <h3 className="text-base font-bold text-[#102743]">Customer-First Mindset</h3>
+                <h3 className="text-base font-bold text-[#102743]">Customer-First Approach</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Your formulation success is our top benchmark. We advise with commercial transparency, realistic timelines, and consistent sample follow-through.
+                  Transparent communication and practical, commercially relevant recommendations.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 3. Enduring Partnership */}
+          {/* 3. Long-Term Partnerships */}
           <div className="group rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/50 transition-all flex flex-col justify-between">
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
-                  src="/src/assets/images/enduring_partnership_folio_1793523387341.jpg"
-                  alt="Enduring Partnership - Corporate partnership agreement folio and premium cosmetic product portfolio"
+                  src="/assets/images/enduring_partnership_folio_1793523387341.jpg"
+                  alt="Long-Term Partnerships - Corporate partnership agreement folio and premium cosmetic product portfolio"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 space-y-2 text-left">
-                <h3 className="text-base font-bold text-[#102743]">Enduring Partnership</h3>
+                <h3 className="text-base font-bold text-[#102743]">Long-Term Partnerships</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  We aim to remain your preferred ingredient partner across multiple product launches, range refreshes, and long-term brand expansions.
+                  Building trust through consistency, commitment and mutual growth.
                 </p>
               </div>
             </div>

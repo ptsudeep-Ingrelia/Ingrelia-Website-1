@@ -30,17 +30,17 @@ export interface SolutionPillar {
 export const COMPANY_DETAILS = {
   name: 'INGRELIA',
   legalName: 'INGRELIA Ingredients Private Limited',
-  positioning: 'Your Personal Care Ingredients Partner',
+  positioning: 'Ingredients that inspire better formulations',
   tagline: 'Ingredients that inspire better formulations.',
   heroHeadline: 'INGREDIENTS THAT INSPIRE BETTER FORMULATIONS.',
   heroSupportingStatement:
-    'Your trusted partner for personal-care ingredient solutions, connecting market needs with the right formulation possibilities.',
+    "Connecting India's personal care industry with quality specialty ingredients, global sourcing expertise, and reliable supply solutions.",
   aboutPositioningStatement:
-    'At INGRELIA, we believe that successful formulations begin with understanding the right ingredients and the needs behind every formulation. We aim to bridge customer requirements with relevant ingredient solutions through market understanding, focused engagement and dependable business relationships.',
+    "At Ingrelia Ingredients Pvt. Ltd., we believe that the right ingredients can make a meaningful difference to the way personal-care products are developed and experienced. We are building a specialty ingredients distribution business focused on serving India's personal-care industry with a carefully selected portfolio of ingredients, responsive service and a strong understanding of customer needs.",
   vision:
-    'To become a trusted, knowledgeable and customer-focused personal-care ingredients partner, recognized for understanding formulation requirements and connecting customers with relevant ingredient possibilities.',
+    'To be recognized as a trusted and knowledgeable partner, known for industry understanding, quality ingredient solutions and lasting customer relationships.',
   mission:
-    'To support personal-care and cosmetic manufacturers through deep customer understanding, reliable ingredient sourcing, responsive business coordination and dependable long-term relationships.',
+    'To connect customers with the right specialty ingredients through reliable sourcing, technical understanding, responsive service and a commitment to long-term partnerships.',
   email: 'sales@ingrelia.in',
   phone: '+91 9820300401',
   website: 'www.ingrelia.in',
@@ -55,56 +55,56 @@ export const INGREDIENT_CATEGORIES: IngredientCategoryReference[] = [
   {
     id: 'emollients-emulsifiers',
     title: 'Emollients and Emulsifiers',
-    role: 'Sensory texture design & emulsion structural stability',
+    role: 'Sensory texture design & emulsion stability',
     description:
-      'High-performance ester bases, natural and synthetic emulsifying systems, and sensory modifiers providing targeted skin feel, spreadability, and emulsion stability.',
+      'Esters, natural and synthetic emulsifying systems delivering targeted skin feel, spreadability, and emulsion stability.',
     commonApplications: ['Skin Care', 'Body Care', 'Sun Care', 'Colour Cosmetics'],
-    image: '/src/assets/images/category_emollients_1793457538734.jpg',
+    image: '/assets/images/category_emollients_1793457538734.jpg',
   },
   {
     id: 'surfactants',
     title: 'Surfactants',
-    role: 'Mild cleansing, foam density & rinse dynamics',
+    role: 'Mild cleansing & foam dynamics',
     description:
-      'Mild, sulfate-free, bio-derived, and amphoteric surfactant architectures delivering rich foam quality, gentle dermatological compatibility, and rinse-off performance.',
+      'Mild, sulfate-free and bio-derived surfactants providing gentle cleansing, rich foam quality, and rinse-off performance.',
     commonApplications: ['Hair Care', 'Toiletries', 'Personal Hygiene', 'Skin Care'],
-    image: '/src/assets/images/cat_surfactants_authentic_1793520849739.jpg',
+    image: '/assets/images/cat_surfactants_authentic_1793520849739.jpg',
   },
   {
     id: 'actives',
     title: 'Actives',
-    role: 'Targeted biological efficacy & substantiated benefits',
+    role: 'Substantiated biological efficacy',
     description:
-      'Substantiated botanical extracts, peptide complexes, biotechnological actives, and cellular nutrients delivering verifiable claims for contemporary personal care.',
+      'Botanical extracts, peptides, and biotech actives delivering verifiable performance and substantiated consumer claims.',
     commonApplications: ['Skin Care', 'Hair Care', 'Sun Care', 'Body Care'],
-    image: '/src/assets/images/cat_actives_authentic_1793520861940.jpg',
+    image: '/assets/images/cat_actives_authentic_1793520861940.jpg',
   },
   {
     id: 'uv-filters',
     title: 'UV Filters',
-    role: 'Broad-spectrum photoprotection & photostability',
+    role: 'Broad-spectrum photoprotection',
     description:
-      'Broad-spectrum organic and inorganic photoprotective technologies engineered for high UVA/UVB absorption efficiency, photostability, and cosmetic elegance.',
+      'Broad-spectrum organic and mineral UV filters engineered for high photostability and cosmetic elegance.',
     commonApplications: ['Sun Care', 'Skin Care', 'Colour Cosmetics'],
-    image: '/src/assets/images/cat_uv_filters_authentic_1793520874381.jpg',
+    image: '/assets/images/cat_uv_filters_authentic_1793520874381.jpg',
   },
   {
     id: 'preservatives',
     title: 'Preservatives',
-    role: 'Microbiological integrity & formulation longevity',
+    role: 'Microbiological integrity & safety',
     description:
-      'Modern, globally compliant antimicrobial systems, multifunctional preservation boosters, and clean-beauty preservation solutions ensuring product safety and stability.',
+      'Modern antimicrobial systems and multifunctional preservation boosters ensuring formula longevity and product safety.',
     commonApplications: ['Skin Care', 'Hair Care', 'Toiletries', 'Personal Hygiene'],
-    image: '/src/assets/images/cat_preservatives_authentic_1793520886708.jpg',
+    image: '/assets/images/cat_preservatives_authentic_1793520886708.jpg',
   },
   {
     id: 'functional-ingredients',
     title: 'Functional Ingredients',
-    role: 'Rheology control, suspension & tactile modulation',
+    role: 'Rheology control & tactile modulation',
     description:
-      'Rheology modifiers, polymeric thickeners, sensory texturizers, solubilizers, and formulation stabilizers that define product viscosity, crystal clarity, and touch.',
+      'Polymeric thickeners, sensory texturizers, and stabilizers that define formulation viscosity, clarity, and touch.',
     commonApplications: ['Skin Care', 'Hair Care', 'Colour Cosmetics', 'Body Care'],
-    image: '/src/assets/images/cat_functional_authentic_1793520899158.jpg',
+    image: '/assets/images/cat_functional_authentic_1793520899158.jpg',
   },
 ];
 
@@ -128,7 +128,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Subtle Rheology Modifiers for fast-break sensory textures',
       'Gentle Preservative boosters aligned with clean skincare benchmarks',
     ],
-    image: '/src/assets/images/application_skincare_1793457539721.jpg',
+    image: '/assets/images/application_skincare_1793457539721.jpg',
   },
   {
     id: 'hair-care',
@@ -148,7 +148,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Scalp Wellness Actives promoting follicle vitality',
       'Polymeric Thickeners for crystal-clear shampoo formulations',
     ],
-    image: '/src/assets/images/app_haircare_authentic_1793460095247.jpg',
+    image: '/assets/images/app_haircare_authentic_1793460095247.jpg',
   },
   {
     id: 'sun-care',
@@ -168,7 +168,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Waterproof Film Formers providing lasting outdoor resistance',
       'Soothing Botanical Actives for post-exposure antioxidant defence',
     ],
-    image: '/src/assets/images/app_suncare_authentic_1793459785927.jpg',
+    image: '/assets/images/app_suncare_authentic_1793459785927.jpg',
   },
   {
     id: 'body-care',
@@ -188,7 +188,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Firming and smoothing body actives',
       'Broad-spectrum preservatives and sensory texturizers',
     ],
-    image: '/src/assets/images/category_emollients_1793457538734.jpg',
+    image: '/assets/images/category_emollients_1793457538734.jpg',
   },
   {
     id: 'colour-cosmetics',
@@ -208,7 +208,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Skincare actives tailored for hybrid cosmetic formulations',
       'Mineral and transparent UV filter dispersions for tinted SPF primers',
     ],
-    image: '/src/assets/images/app_cosmetics_authentic_1793459786221.jpg',
+    image: '/assets/images/app_cosmetics_authentic_1793459786221.jpg',
   },
   {
     id: 'toiletries',
@@ -228,7 +228,7 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Broad-spectrum, cost-effective preservative systems',
       'Efficient salt-responsive and polymeric rheology modifiers',
     ],
-    image: '/src/assets/images/app_toiletries_authentic_1793459787330.jpg',
+    image: '/assets/images/app_toiletries_authentic_1793459787330.jpg',
   },
   {
     id: 'personal-hygiene',
@@ -248,81 +248,81 @@ export const APPLICATION_AREAS: ApplicationArea[] = [
       'Microbiome-friendly soothing actives and botanical extracts',
       'Clean-label, gentle preservative boosters',
     ],
-    image: '/src/assets/images/app_hygiene_authentic_1793459786687.jpg',
+    image: '/assets/images/app_hygiene_authentic_1793459786687.jpg',
   },
 ];
 
-// CUSTOMER SOLUTIONS - FIVE CORE DIFFERENTIATING PILLARS
+// CUSTOMER SOLUTIONS - FIVE CORE SERVICE MODEL PILLARS
 export const CUSTOMER_SOLUTIONS_PILLARS: SolutionPillar[] = [
   {
-    id: 'ingredient-sourcing',
+    id: 'understanding-requirements',
     stepNumber: '01',
-    title: 'Ingredient Sourcing',
-    subtitle: 'Understanding needs & identifying relevant sourcing opportunities',
+    title: 'Understanding Your Requirements',
+    subtitle: 'Objectives, technical specifications & commercial criteria',
     description:
-      'We work closely with procurement and product teams to understand their exact benchmark needs, performance criteria, regulatory compliance targets, and volume scale, mapping them to dependable ingredient sourcing options.',
+      'Understanding your product objectives, technical specifications, performance expectations and commercial requirements to identify the right ingredient solutions.',
     keyAspects: [
-      'Clarification of sensory, chemical, and physical ingredient specifications',
-      'Alignment with target regulatory and clean-label standards',
-      'Evaluation of dependable supply continuity for Indian manufacturing batches',
+      'Target performance benchmarks and skin-feel criteria',
+      'Technical specifications, pH and stability goals',
+      'Commercial parameters and launch timelines',
     ],
-    image: '/src/assets/images/ing_sourcing_nature_1793520263299.jpg',
+    image: '/assets/images/ing_sourcing_nature_1793520263299.jpg',
   },
   {
-    id: 'formulation-requirements',
+    id: 'ingredient-selection-sourcing',
     stepNumber: '02',
-    title: 'Formulation Requirements',
-    subtitle: 'Exploring formulation possibilities & application fit',
+    title: 'Ingredient Selection & Sourcing',
+    subtitle: 'Specialty ingredients & dependable sourcing options',
     description:
-      'Every personal-care category comes with nuanced technical constraints. We help R&D and formulators navigate compatibility, phase solubility, pH stability, and dosage levels to achieve target benchmark outcomes.',
+      'Identifying suitable specialty ingredients and sourcing options aligned with your formulation needs, quality expectations and commercial objectives.',
     keyAspects: [
-      'Translating product concept briefs into concrete ingredient choices',
-      'Addressing emulsion stability, viscosity, and sensory texture hurdles',
-      'Advising on optimal usage percentages and phase incorporation methods',
+      'Identification of suitable specialty chemistries',
+      'Global sourcing expertise and quality compliance',
+      'Reliable supply continuity for Indian manufacturing',
     ],
-    image: '/src/assets/images/formulation_texture_1793520264573.jpg',
+    image: '/assets/images/formulation_texture_1793520264573.jpg',
   },
   {
-    id: 'product-evaluation',
+    id: 'sampling-technical-evaluation',
     stepNumber: '03',
-    title: 'Product Evaluation',
-    subtitle: 'Supporting customer evaluation and lab coordination',
+    title: 'Sampling & Technical Evaluation',
+    subtitle: 'Bench samples, technical documentation & application support',
     description:
-      'From lab bench trials to stability chambers, ingredient evaluation takes time and coordination. INGRELIA supports your development pipeline with responsive sample dispatch, technical data alignment, and testing feedback.',
+      'Facilitating product samples, technical documentation and application support to help evaluate ingredient suitability and formulation performance.',
     keyAspects: [
-      'Prompt sample dispatch for laboratory bench trials and stability tests',
-      'Technical documentation including Certificates of Analysis (COA) and specifications',
-      'Responsive coordination during sensory and performance trials',
+      'Prompt sample dispatch for bench trials and testing',
+      'Complete documentation including TDS, COA and dossiers',
+      'Application guidance during formulation trials',
     ],
-    image: '/src/assets/images/product_eval_skin_1793520265999.jpg',
+    image: '/assets/images/product_eval_skin_1793520265999.jpg',
   },
   {
-    id: 'business-coordination',
+    id: 'commercial-supply-coordination',
     stepNumber: '04',
-    title: 'Business Coordination',
-    subtitle: 'Responsive communication throughout customer engagement',
+    title: 'Commercial & Supply Coordination',
+    subtitle: 'Quotations, order processing & reliable logistics',
     description:
-      'Agile commercial coordination is at the heart of our service. We ensure transparent lead times, proactive commercial communication, and attentive operational support from initial inquiry to recurring orders.',
+      'Coordinating quotations, order processing, delivery schedules and supply requirements with clear communication throughout the process.',
     keyAspects: [
-      'Dedicated point of contact for commercial and technical queries',
-      'Proactive order tracking and delivery schedule coordination',
-      'Structured communication that respects launch deadlines and production schedules',
+      'Transparent commercial pricing and realistic lead times',
+      'Order processing with proactive delivery tracking',
+      'Clear, responsive communication at every step',
     ],
-    image: '/src/assets/images/biz_coordination_corp_1793520266543.jpg',
+    image: '/assets/images/biz_coordination_desk_1793680610555.jpg',
   },
   {
     id: 'long-term-partnership',
     stepNumber: '05',
-    title: 'Long-Term Customer Partnership',
-    subtitle: 'Building enduring relationships with a customer-first approach',
+    title: 'Long-Term Partnership',
+    subtitle: 'Consistent engagement, dependable execution & mutual growth',
     description:
-      'We view our customer relationships as long-range partnerships. As your portfolio expands and trends shift, INGRELIA remains your consistent, knowledgeable ally, sharing relevant market insights and new ingredient opportunities.',
+      'Building lasting relationships through consistent engagement, dependable supply, responsive service and support as your business requirements evolve.',
     keyAspects: [
-      'Consistent engagement across multiple formulation cycles and brand expansions',
-      'Market-aware suggestions tailored to evolving consumer trends in India',
-      'A customer-first philosophy centered on mutual trust and dependable execution',
+      'Ongoing engagement across product cycles and refreshes',
+      'Dependable supply continuity for long-term production',
+      'Customer-first approach centered on mutual growth',
     ],
-    image: '/src/assets/images/longterm_partner_corp_1793520282800.jpg',
+    image: '/assets/images/longterm_partnership_growth_1793680610336.jpg',
   },
 ];
 

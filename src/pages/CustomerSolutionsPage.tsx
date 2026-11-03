@@ -7,7 +7,6 @@ import {
 } from '../data/companyData';
 import {
   ArrowRight,
-  Check,
   Sparkles,
   Search,
   FlaskConical,
@@ -37,34 +36,31 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
           More Than a Conventional Distributor
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          INGRELIA works alongside personal-care brands, contract manufacturers, and R&D formulation
-          teams. We focus on understanding your distinct product goals, mapping them to relevant ingredient
-          possibilities, and ensuring responsive, dependable execution.
+          INGRELIA works closely with brands, manufacturers and R&D teams to understand their product objectives and technical requirements. We go beyond ingredient supply by identifying relevant ingredient solutions, providing technical insights and ensuring responsive, reliable and consistent support throughout the sourcing process.
         </p>
       </div>
 
       {/* Five Core Customer Solution Stages */}
       <div className="space-y-8">
-        <div className="max-w-2xl space-y-2">
+        <div className="max-w-3xl space-y-2">
           <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
             Our Service Model
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#102743]">
-            How We Support Your Formulation Journey
+            From Ingredient Selection to Reliable Supply
           </h2>
-          <p className="text-sm text-slate-600">
-            From initial concept exploration to full-scale commercial manufacturing, our engagement
-            is built around your technical requirements.
+          <p className="text-sm text-slate-600 leading-relaxed">
+            From understanding your requirements and identifying suitable ingredients to product evaluation and commercial supply, our approach is built around technical understanding, responsive coordination and dependable execution.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {CUSTOMER_SOLUTIONS_PILLARS.map((pillar, index) => {
             const Icon = pillarIcons[index] || Sparkles;
             return (
               <div
                 key={pillar.id}
-                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/40 transition-all flex flex-col justify-between"
               >
                 <div>
                   {/* Authentic AI Image Header */}
@@ -77,36 +73,18 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#102743]/60 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4">
-                      <div className="w-9 h-9 rounded-lg bg-[#009999]/90 text-white flex items-center justify-center shadow-sm backdrop-blur-xs">
+                      <div className="w-8 h-8 rounded-lg bg-[#009999]/90 text-white flex items-center justify-center shadow-sm backdrop-blur-xs">
                         <Icon className="w-4 h-4" />
                       </div>
                     </div>
                   </div>
 
                   {/* Pillar Content */}
-                  <div className="p-6 space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-[#102743]">{pillar.title}</h3>
-                      <p className="text-xs font-medium text-[#009999] mt-1">{pillar.subtitle}</p>
-                    </div>
-
+                  <div className="p-6 space-y-3">
+                    <h3 className="text-lg font-bold text-[#102743] tracking-tight">{pillar.title}</h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                       {pillar.description}
                     </p>
-
-                    <div className="pt-3 border-t border-slate-100 space-y-2">
-                      <p className="text-[10px] font-bold text-[#102743] uppercase tracking-wider">
-                        Key Highlights
-                      </p>
-                      <ul className="space-y-2 text-xs text-slate-600">
-                        {pillar.keyAspects.map((aspect) => (
-                          <li key={aspect} className="flex items-start gap-2">
-                            <Check className="w-3.5 h-3.5 text-[#009999] shrink-0 mt-0.5" />
-                            <span>{aspect}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </div>
 
@@ -140,9 +118,7 @@ export const CustomerSolutionsPage: React.FC<CustomerSolutionsPageProps> = ({
             Ingredient Categories We Work With
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
-            We focus on six core functional and active ingredient categories for personal-care and cosmetic
-            formulations. Individual product selection, sample coordination, and technical specifications
-            are tailored during direct customer discussions.
+            A focused portfolio of functional and active specialty ingredients tailored to your formulation benchmarks.
           </p>
         </div>
 

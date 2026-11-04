@@ -64,10 +64,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
                 <div className="absolute inset-0 bg-gradient-to-t from-[#102743]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-left">
                   <p className="text-[11px] font-semibold tracking-wider text-[#00b3b3] uppercase">
-                    Formulation Partnership
+                    INGREDIENT EXPERTISE
                   </p>
                   <p className="text-xs text-slate-200 mt-0.5">
-                    Aligning customer benchmarks with dependable ingredient chemistries.
+                    Understanding Formulation Needs. Delivering Ingredient Solutions.
                   </p>
                 </div>
               </div>

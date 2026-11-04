@@ -307,34 +307,40 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {CUSTOMER_SOLUTIONS_PILLARS.map((pillar) => (
-            <div
+            <button
               key={pillar.id}
-              className="rounded-xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-sm transition-all flex flex-col justify-between"
+              onClick={() => {
+                onNavigate('solutions');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="group rounded-xl bg-white border border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:border-[#009999]/60 transition-all duration-200 flex flex-col justify-between text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#009999]"
             >
               <div>
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
                     src={pillar.image}
                     alt={pillar.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     referrerPolicy="no-referrer"
                   />
+                  <div className="absolute inset-0 bg-[#102743]/0 group-hover:bg-[#102743]/10 transition-colors duration-200" />
                 </div>
 
                 <div className="p-4 space-y-1.5 text-left">
-                  <h3 className="text-xs font-bold text-[#102743] leading-snug">{pillar.title}</h3>
+                  <h3 className="text-xs font-bold text-[#102743] group-hover:text-[#009999] transition-colors leading-snug">
+                    {pillar.title}
+                  </h3>
                   <p className="text-[11px] text-slate-600 leading-relaxed line-clamp-3">
                     {pillar.description}
                   </p>
                 </div>
               </div>
 
-              <div className="px-4 pb-3 pt-1 border-t border-slate-100">
-                <span className="text-[10px] font-medium text-[#009999] block truncate">
-                  {pillar.subtitle}
-                </span>
+              <div className="px-4 pb-3 pt-1 flex items-center gap-1 text-[10px] font-semibold text-[#009999] opacity-80 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
+                <span>View Details</span>
+                <ChevronRight className="w-3 h-3" />
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </section>

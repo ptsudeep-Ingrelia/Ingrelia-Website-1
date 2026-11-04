@@ -30,7 +30,7 @@ export interface SolutionPillar {
 export const COMPANY_DETAILS = {
   name: 'INGRELIA',
   legalName: 'INGRELIA Ingredients Private Limited',
-  positioning: 'Ingredients that inspire better formulations',
+  positioning: 'Ingredients That Inspire Better Formulations',
   tagline: 'Ingredients that inspire better formulations.',
   heroHeadline: 'INGREDIENTS THAT INSPIRE BETTER FORMULATIONS.',
   heroSupportingStatement:

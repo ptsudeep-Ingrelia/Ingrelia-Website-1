@@ -31,11 +31,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
               <Logo variant="dark-bg" size="lg" showTagline={false} />
             </button>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm pt-1">
-              {COMPANY_DETAILS.tagline} Connecting market requirements with relevant speciality
-              ingredient solutions for India's evolving personal care and cosmetic industry.
-            </p>
-
             <div className="pt-2 flex items-center gap-3">
               <a
                 href={COMPANY_DETAILS.linkedin}

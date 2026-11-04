@@ -22,8 +22,7 @@ export const ContactPage: React.FC = () => {
           Connect With INGRELIA
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          Reach our commercial team and technical formulation advisors. We welcome discussions with
-          formulators, R&D chemists, brand creators, and procurement professionals across India.
+          Reach out to our commercial team and technical specialists. We welcome discussions with formulators, R&D chemists, brand creators, manufacturers and procurement professionals.
         </p>
       </div>
 
@@ -139,13 +138,11 @@ export const ContactPage: React.FC = () => {
             <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-slate-200 bg-slate-100 shadow-inner">
               <iframe
                 title="INGRELIA Office Location - Cine Wonder Complex, Thane"
-                src="https://maps.google.com/maps?q=Cine+Wonder+Mall,+Ghodbunder+Road,+Kapurbawdi,+Thane+West,+Maharashtra+400607&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=72.9690%2C19.2140%2C72.9850%2C19.2290&layer=mapnik&marker=19.2215%2C72.9774"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen={false}
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
               />
             </div>

@@ -22,13 +22,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
       {/* Header */}
       <div className="border-b border-slate-200 pb-10 space-y-4">
         <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
-          About Ingrelia
+          ABOUT INGRELIA
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102743] tracking-tight">
           Connecting Ingredients. Enabling Innovation.
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          At Ingrelia Ingredients Pvt. Ltd., we believe that the right ingredients can make a meaningful difference to the way personal-care products are developed and experienced.
+          At Ingrelia Ingredients Pvt. Ltd., we believe the right ingredients can make a meaningful difference in how products are developed, formulated and experienced. We bring together specialty ingredients, technical understanding and reliable sourcing to support innovation and customer success.
         </p>
       </div>
 

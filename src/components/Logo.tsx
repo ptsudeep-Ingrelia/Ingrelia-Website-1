@@ -23,8 +23,8 @@ export const Logo: React.FC<LogoProps> = ({
   }[size];
 
   const logoSrc = isDarkBg
-    ? '/assets/aistudio/ingrelia_logo_dark_bg.png'
-    : '/assets/aistudio/ingrelia_logo_transparent.png';
+    ? '/assets/images/ingrelia_logo_dark_highres.png'
+    : '/assets/images/ingrelia_logo_light_highres.png';
 
   return (
     <div className={`inline-flex flex-col select-none ${className}`} aria-label="INGRELIA">
@@ -32,8 +32,7 @@ export const Logo: React.FC<LogoProps> = ({
         <img
           src={logoSrc}
           alt="INGRELIA"
-          className={`${logoHeight} w-auto object-contain filter contrast-[1.05] transition-transform duration-200 hover:scale-[1.02]`}
-          style={{ imageRendering: '-webkit-optimize-contrast' }}
+          className={`${logoHeight} w-auto object-contain transition-transform duration-200 hover:scale-[1.02]`}
         />
       </div>
 

@@ -15,11 +15,11 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
   const isDarkBg = variant === 'dark-bg';
 
-  // Responsive height scale for razor-sharp rendering of the bolder official INGRELIA logo
+  // Responsive height scale matching website standards for wide wordmarks (~9:1 aspect ratio)
   const logoHeight = {
-    sm: 'h-7 sm:h-8',
-    md: 'h-8 sm:h-9.5',
-    lg: 'h-9 sm:h-11',
+    sm: 'h-4.5 sm:h-5',
+    md: 'h-5 sm:h-6',
+    lg: 'h-6 sm:h-7',
   }[size];
 
   const logoSrc = isDarkBg

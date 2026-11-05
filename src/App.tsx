@@ -10,6 +10,7 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ApplicationsPage } from './pages/ApplicationsPage';
 import { CustomerSolutionsPage } from './pages/CustomerSolutionsPage';
+import { CareersPage } from './pages/CareersPage';
 import { ContactPage } from './pages/ContactPage';
 import { EnquiryModal } from './components/EnquiryModal';
 import { EnquiryInspectorModal } from './components/EnquiryInspectorModal';
@@ -28,7 +29,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as PageId;
-      const validPages: PageId[] = ['home', 'about', 'applications', 'solutions', 'contact'];
+      const validPages: PageId[] = ['home', 'about', 'applications', 'solutions', 'careers', 'contact'];
       if (validPages.includes(hash)) {
         setActivePage(hash);
       }
@@ -95,6 +96,12 @@ export default function App() {
         )}
         {activePage === 'solutions' && (
           <CustomerSolutionsPage
+            onNavigate={handleNavigate}
+            onOpenConnectModal={handleOpenConnectModal}
+          />
+        )}
+        {activePage === 'careers' && (
+          <CareersPage
             onNavigate={handleNavigate}
             onOpenConnectModal={handleOpenConnectModal}
           />

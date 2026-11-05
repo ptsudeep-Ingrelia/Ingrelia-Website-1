@@ -75,26 +75,26 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
         <div className="lg:col-span-5 bg-[#F5F7F9] p-6 sm:p-8 rounded-2xl border border-slate-200 space-y-4">
           <div className="border-b border-slate-200 pb-3">
             <h3 className="text-sm font-bold uppercase tracking-wider text-[#102743]">
-              Our Industry Focus
+              OUR BUSINESS FOCUS
             </h3>
-            <p className="text-xs text-slate-500 mt-0.5">Speciality Personal Care & Cosmetics</p>
+            <p className="text-xs text-slate-500 mt-0.5">Specialty Ingredients & Solutions</p>
           </div>
           <ul className="space-y-3 text-xs text-slate-600">
             <li className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#009999] shrink-0 mt-0.5" />
-              <span>100% focused on personal care, cosmetics, and derma raw materials</span>
+              <span>Focused expertise in specialty ingredients and application-driven solutions</span>
             </li>
             <li className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#009999] shrink-0 mt-0.5" />
-              <span>Active engagement with R&D, formulators, and procurement teams</span>
+              <span>Working closely with R&D, technical and procurement teams</span>
             </li>
             <li className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#009999] shrink-0 mt-0.5" />
-              <span>Attuned to Indian climatic, sensory, and regulatory realities</span>
+              <span>Understanding evolving market, technical and regulatory requirements</span>
             </li>
             <li className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#009999] shrink-0 mt-0.5" />
-              <span>Dependable coordination from bench-scale samples to recurring batches</span>
+              <span>Reliable coordination from initial sampling to regular commercial supply</span>
             </li>
           </ul>
         </div>

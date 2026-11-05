@@ -98,6 +98,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
               </li>
               <li>
                 <button
+                  onClick={() => handleNavClick('careers')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Careers
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => handleNavClick('contact')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >

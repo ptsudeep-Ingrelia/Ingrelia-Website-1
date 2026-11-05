@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
 import { Menu, X, ArrowRight, MessageSquare } from 'lucide-react';
 
-export type PageId = 'home' | 'about' | 'applications' | 'solutions' | 'contact';
+export type PageId = 'home' | 'about' | 'applications' | 'solutions' | 'careers' | 'contact';
 
 interface NavbarProps {
   activePage: PageId;
@@ -26,12 +26,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // EXACT FIVE MAIN NAVIGATION SECTIONS ONLY
+  // Main navigation sections
   const navLinks: { id: PageId; label: string }[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'applications', label: 'Applications' },
     { id: 'solutions', label: 'Customer Solutions' },
+    { id: 'careers', label: 'Careers' },
     { id: 'contact', label: 'Contact Us' },
   ];
 

@@ -32,23 +32,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
         </p>
       </div>
 
-      {/* Suggested Positioning Statement Blockquote */}
+      {/* Purpose & Vision Section */}
       <div className="p-8 sm:p-12 rounded-2xl bg-[#102743] text-white border border-[#18375e] shadow-sm relative overflow-hidden">
-        <div className="max-w-4xl space-y-5">
+        <div className="max-w-4xl space-y-4">
           <span className="text-xs font-bold tracking-widest text-[#00b3b3] uppercase">
-            Our Purpose & Vision
+            OUR PURPOSE & VISION
           </span>
-          <blockquote className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-slate-100">
-            "We are building a specialty ingredients distribution business focused on serving India's personal-care industry with a carefully selected portfolio of ingredients, responsive service and a strong understanding of customer needs."
-          </blockquote>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed pt-1">
-            Our focus spans skin care, hair care, sun care and personal hygiene, connecting ingredient manufacturers with the brands, formulators and businesses that turn ideas into finished products.
+          <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-slate-100">
+            Our purpose is to connect customers with the right specialty ingredients through a carefully selected portfolio, responsive service and a strong understanding of their needs.
           </p>
-          <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-slate-300">
-            <span className="font-semibold text-white">Ingrelia Ingredients Pvt. Ltd.</span>
-            <span>·</span>
-            <span>Connecting Ingredients. Enabling Innovation.</span>
-          </div>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed pt-1">
+            Our initial focus spans skincare, haircare, sun care and personal hygiene, connecting ingredient manufacturers with the brands, formulators and businesses that turn ideas into finished products.
+          </p>
         </div>
       </div>
 

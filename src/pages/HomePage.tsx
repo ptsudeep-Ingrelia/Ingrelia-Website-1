@@ -3,10 +3,8 @@ import { PageId } from '../components/Navbar';
 import {
   COMPANY_DETAILS,
   APPLICATION_AREAS,
-  INGREDIENT_CATEGORIES,
   CUSTOMER_SOLUTIONS_PILLARS,
   ApplicationArea,
-  IngredientCategoryReference,
 } from '../data/companyData';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 
@@ -16,6 +14,7 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectModal }) => {
+
   return (
     <div className="space-y-20 sm:space-y-24 pb-20">
       {/* ---------------- 1. HERO SECTION ---------------- */}
@@ -237,55 +236,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
         </div>
       </section>
 
-      {/* ---------------- 4. CORE INGREDIENT CHEMISTRIES ---------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-            <span className="text-xs font-bold tracking-widest text-[#009999] uppercase">
-              Ingredient Categories
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#102743] tracking-tight mt-1">
-              Our Personal Care Ingredient Portfolio
-            </h2>
-          </div>
-          <button
-            onClick={() => onOpenConnectModal()}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#009999] hover:text-[#102743] transition-colors cursor-pointer shrink-0"
-          >
-            <span>Inquire by Category</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {INGREDIENT_CATEGORIES.map((cat: IngredientCategoryReference) => (
-            <div
-              key={cat.id}
-              onClick={() => onOpenConnectModal('', cat.title)}
-              className="group rounded-xl border border-slate-200 overflow-hidden bg-white shadow-xs hover:border-[#009999] hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                <img
-                  src={cat.image}
-                  alt={cat.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-3 text-left">
-                <h4 className="text-xs font-bold text-[#102743] group-hover:text-[#009999] transition-colors leading-snug">
-                  {cat.title}
-                </h4>
-                <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-tight">
-                  {cat.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ---------------- 5. THE FORMULATION JOURNEY ---------------- */}
+      {/* ---------------- 4. CUSTOMER SUPPORT JOURNEY ---------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
@@ -379,8 +330,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenConnectMod
 
           <div className="pt-3 text-[11px] text-slate-400">
             <span>{COMPANY_DETAILS.email}</span>
-            <span className="mx-2">·</span>
-            <span>{COMPANY_DETAILS.phone}</span>
             <span className="mx-2">·</span>
             <span>{COMPANY_DETAILS.website}</span>
           </div>

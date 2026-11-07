@@ -42,12 +42,12 @@ export const COMPANY_DETAILS = {
   mission:
     'To connect customers with the right specialty ingredients through reliable sourcing, technical understanding, responsive service and a commitment to long-term partnerships.',
   email: 'sales@ingrelia.in',
-  phone: '+91 9820300401',
+  phone: '',
   website: 'www.ingrelia.in',
   websiteUrl: 'https://www.ingrelia.in',
   address: '1st Floor, 53, Cine Wonder Complex, Thane, Maharashtra, 400607, India',
   linkedin: 'https://linkedin.com/company/ingrelia-ingredients',
-  whatsapp: '919820300401',
+  whatsapp: '',
 };
 
 // EXACT SIX APPROVED INGREDIENT CATEGORIES (CATEGORY-LEVEL REFERENCE ONLY)

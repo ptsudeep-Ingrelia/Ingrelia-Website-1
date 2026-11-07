@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo } from './Logo';
 import { PageId } from './Navbar';
 import { COMPANY_DETAILS, APPLICATION_AREAS } from '../data/companyData';
-import { MapPin, Mail, Phone, Globe, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, Globe, ArrowUpRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -41,19 +41,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
               >
                 <span>LinkedIn</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#009999]" />
-              </a>
-
-              <a
-                href={`https://wa.me/${COMPANY_DETAILS.whatsapp}?text=${encodeURIComponent(
-                  'Hello INGRELIA Ingredients team, I would like to enquire about personal-care ingredient solutions.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#009999]/20 hover:bg-[#009999]/30 text-xs font-medium text-[#00b3b3] border border-[#009999]/40 transition-colors"
-                aria-label="Direct WhatsApp Enquiry"
-              >
-                <span>WhatsApp</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>
@@ -148,12 +135,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
                 <Mail className="w-4 h-4 text-[#009999] shrink-0" />
                 <a href={`mailto:${COMPANY_DETAILS.email}`} className="hover:text-white transition-colors">
                   {COMPANY_DETAILS.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#009999] shrink-0" />
-                <a href={`tel:${COMPANY_DETAILS.phone}`} className="hover:text-white transition-colors">
-                  {COMPANY_DETAILS.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">

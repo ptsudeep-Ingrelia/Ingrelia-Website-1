@@ -6,16 +6,10 @@ import {
   generateEnquiryReceiptText,
 } from '../services/enquiryService';
 import {
-  COMPANY_DETAILS,
-  INGREDIENT_CATEGORIES,
-  APPLICATION_AREAS,
-} from '../data/companyData';
-import {
   CheckCircle2,
   AlertCircle,
   Loader2,
   Download,
-  MessageSquare,
   Send,
 } from 'lucide-react';
 
@@ -106,22 +100,10 @@ export const CustomerEnquiryForm: React.FC<CustomerFormProps> = ({
           </p>
         </div>
 
-        <div className="pt-1 flex flex-wrap items-center justify-center gap-2">
-          <a
-            href={`https://wa.me/${COMPANY_DETAILS.whatsapp}?text=${encodeURIComponent(
-              `Hello INGRELIA team, I submitted an inquiry [Ref: ${submissionResult.referenceNumber}] for ${submissionResult.payload.companyName || submissionResult.payload.name}.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#009999] hover:bg-[#007f7f] text-white text-xs font-semibold uppercase tracking-wider transition-colors"
-          >
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Chat on WhatsApp</span>
-          </a>
-
+        <div className="pt-1 flex items-center justify-center">
           <button
             onClick={handleDownloadReceipt}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-slate-300 hover:border-[#102743] text-[#102743] text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-slate-300 hover:border-[#102743] text-[#102743] text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5 text-[#009999]" />
             <span>Save Slip</span>
@@ -233,35 +215,7 @@ export const CustomerEnquiryForm: React.FC<CustomerFormProps> = ({
         </div>
       </div>
 
-      {/* Row 3: Area of Interest */}
-      <div>
-        <label className="block text-[11px] font-semibold text-[#102743] mb-1 uppercase tracking-wider">
-          Area of Interest
-        </label>
-        <select
-          value={formData.applicationOfInterest}
-          onChange={(e) => setFormData({ ...formData, applicationOfInterest: e.target.value })}
-          className="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#009999] focus:ring-1 focus:ring-[#009999] text-xs text-[#263442] outline-none transition-colors bg-white cursor-pointer"
-        >
-          <option value="General Formulation Support">General Ingredient Sourcing & Support</option>
-          <optgroup label="Application Areas">
-            {APPLICATION_AREAS.map((app) => (
-              <option key={app.id} value={app.title}>
-                {app.title}
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label="Ingredient Categories">
-            {INGREDIENT_CATEGORIES.map((cat) => (
-              <option key={cat.id} value={cat.title}>
-                {cat.title}
-              </option>
-            ))}
-          </optgroup>
-        </select>
-      </div>
-
-      {/* Row 4: Requirement Details */}
+      {/* Requirement Details */}
       <div>
         <label className="block text-[11px] font-semibold text-[#102743] mb-1 uppercase tracking-wider">
           Requirement / Inquiry <span className="text-red-500">*</span>
@@ -295,11 +249,6 @@ export const CustomerEnquiryForm: React.FC<CustomerFormProps> = ({
             </>
           )}
         </button>
-      </div>
-
-      <div className="pt-1 flex items-center justify-between text-[11px] text-slate-400">
-        <span>Direct: sales@ingrelia.in</span>
-        <span>WhatsApp: +91 9820300401</span>
       </div>
     </form>
   );

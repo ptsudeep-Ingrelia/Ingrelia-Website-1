@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { Menu, X, ArrowRight, MessageSquare } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export type PageId = 'home' | 'about' | 'applications' | 'solutions' | 'careers' | 'contact';
 
@@ -84,25 +84,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Zone 3: Primary Action - Discuss Your Requirements */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
-            <button
-              onClick={() => onOpenConnectModal()}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#102743] hover:bg-[#18375e] text-white text-xs font-semibold tracking-wider uppercase transition-all duration-200 shadow-sm hover:shadow hover:-translate-y-0.5 whitespace-nowrap shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#009999]"
-            >
-              <span>Discuss Requirements</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#009999]" />
-            </button>
-          </div>
-
           {/* Mobile menu toggle */}
-          <div className="flex lg:hidden items-center gap-2">
-            <button
-              onClick={() => onOpenConnectModal()}
-              className="sm:hidden px-3 py-1.5 rounded-md bg-[#102743] text-white text-xs font-semibold tracking-wider uppercase"
-            >
-              Enquire
-            </button>
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg text-[#102743] hover:bg-slate-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#009999] cursor-pointer"
@@ -136,18 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
               );
             })}
-
-            <div className="pt-4 mt-2 border-t border-slate-100">
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onOpenConnectModal();
-                }}
-                className="w-full py-3 px-4 rounded-lg bg-[#102743] text-white text-xs font-semibold uppercase tracking-wider text-center cursor-pointer"
-              >
-                Discuss Your Requirements
-              </button>
-            </div>
           </div>
         </div>
       )}

@@ -4,10 +4,8 @@ import { COMPANY_DETAILS } from '../data/companyData';
 import {
   MapPin,
   Mail,
-  Phone,
   Globe,
   ExternalLink,
-  MessageSquare,
 } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
@@ -65,14 +63,6 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#00b3b3] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold text-white">Telephone</p>
-                  <p className="text-slate-300 mt-0.5">{COMPANY_DETAILS.phone}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
                 <Globe className="w-4 h-4 text-[#00b3b3] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">Website</p>
@@ -88,27 +78,15 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Connect Options: WhatsApp & LinkedIn */}
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row gap-2.5">
-              <a
-                href={`https://wa.me/${COMPANY_DETAILS.whatsapp}?text=${encodeURIComponent(
-                  'Hello INGRELIA Ingredients team, I would like to connect regarding speciality personal-care ingredients.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 py-2.5 px-3 rounded-lg bg-[#009999] hover:bg-[#007f7f] text-white text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp</span>
-              </a>
-
+            {/* Direct Connect Options: LinkedIn */}
+            <div className="pt-4 border-t border-white/10">
               <a
                 href={COMPANY_DETAILS.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-2.5 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 border border-white/20 transition-colors cursor-pointer"
+                className="w-full py-2.5 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 border border-white/20 transition-colors cursor-pointer"
               >
-                <span>LinkedIn</span>
+                <span>Connect on LinkedIn</span>
                 <ExternalLink className="w-3.5 h-3.5 text-[#00b3b3]" />
               </a>
             </div>

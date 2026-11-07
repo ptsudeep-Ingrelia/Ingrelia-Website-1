@@ -14,8 +14,7 @@ import { CareersPage } from './pages/CareersPage';
 import { ContactPage } from './pages/ContactPage';
 import { EnquiryModal } from './components/EnquiryModal';
 import { EnquiryInspectorModal } from './components/EnquiryInspectorModal';
-import { COMPANY_DETAILS } from './data/companyData';
-import { MessageSquare, ShieldCheck, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export default function App() {
   const [activePage, setActivePage] = useState<PageId>('home');
@@ -130,31 +129,17 @@ export default function App() {
       />
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
-        {showScrollTop && (
+      {showScrollTop && (
+        <div className="fixed bottom-6 right-6 z-40">
           <button
             onClick={scrollToTop}
-            className="pointer-events-auto p-3 rounded-full bg-white text-[#102743] border border-slate-200 shadow-md hover:bg-slate-50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#009999]"
+            className="p-3 rounded-full bg-white text-[#102743] border border-slate-200 shadow-md hover:bg-slate-50 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#009999]"
             aria-label="Scroll to top of page"
           >
             <ArrowUp className="w-4 h-4" />
           </button>
-        )}
-
-        {/* WhatsApp Direct Connect */}
-        <a
-          href={`https://wa.me/${COMPANY_DETAILS.whatsapp}?text=${encodeURIComponent(
-            'Hello INGRELIA Ingredients team, I would like to enquire about personal-care ingredient solutions.'
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pointer-events-auto inline-flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#009999] hover:bg-[#007f7f] text-white text-xs font-semibold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
-          aria-label="Enquire on WhatsApp"
-        >
-          <MessageSquare className="w-4 h-4 text-white" />
-          <span className="hidden sm:inline">WhatsApp Enquiry</span>
-        </a>
-      </div>
+        </div>
+      )}
     </div>
   );
 }

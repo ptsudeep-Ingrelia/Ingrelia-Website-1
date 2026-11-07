@@ -77,19 +77,6 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Direct Connect Options: LinkedIn */}
-            <div className="pt-4 border-t border-white/10">
-              <a
-                href={COMPANY_DETAILS.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 border border-white/20 transition-colors cursor-pointer"
-              >
-                <span>Connect on LinkedIn</span>
-                <ExternalLink className="w-3.5 h-3.5 text-[#00b3b3]" />
-              </a>
-            </div>
           </div>
 
           {/* Location in Google Map */}

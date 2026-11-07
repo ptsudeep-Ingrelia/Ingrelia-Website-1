@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo } from './Logo';
 import { PageId } from './Navbar';
 import { COMPANY_DETAILS, APPLICATION_AREAS } from '../data/companyData';
-import { MapPin, Mail, Globe, ArrowUpRight } from 'lucide-react';
+import { Mail, Globe } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
@@ -30,19 +30,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
             >
               <Logo variant="dark-bg" size="lg" showTagline={false} />
             </button>
-
-            <div className="pt-2 flex items-center gap-3">
-              <a
-                href={COMPANY_DETAILS.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs font-medium text-slate-200 border border-white/10 transition-colors"
-                aria-label="INGRELIA on LinkedIn"
-              >
-                <span>LinkedIn</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#009999]" />
-              </a>
-            </div>
           </div>
 
           {/* Column 2: Navigation (3 cols) */}
@@ -127,10 +114,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
               Contact Details
             </p>
             <div className="space-y-3 text-xs text-slate-300">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#009999] shrink-0 mt-0.5" />
-                <span>{COMPANY_DETAILS.address}</span>
-              </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#009999] shrink-0" />
                 <a href={`mailto:${COMPANY_DETAILS.email}`} className="hover:text-white transition-colors">
@@ -149,15 +132,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
                 </a>
               </div>
             </div>
-
-            <div className="pt-2">
-              <button
-                onClick={() => onOpenConnectModal()}
-                className="w-full py-2.5 px-4 rounded-lg bg-[#009999] hover:bg-[#007f7f] text-white text-xs font-semibold uppercase tracking-wider text-center transition-colors shadow-sm cursor-pointer"
-              >
-                Discuss Formulation Needs
-              </button>
-            </div>
           </div>
         </div>
 
@@ -166,9 +140,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConnectModal }
           <p>
             © {currentYear} {COMPANY_DETAILS.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-[11px] text-slate-400">
-            <span>Thane, Maharashtra, India</span>
-          </div>
         </div>
       </div>
     </footer>

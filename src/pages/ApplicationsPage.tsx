@@ -23,7 +23,7 @@ export const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
           Specialty Ingredients. Diverse Applications.
         </h1>
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          INGRELIA offers a focused range of specialty ingredients designed to meet evolving performance, stability and sensory requirements across diverse application areas. We bring together ingredient expertise, reliable sourcing and technical understanding to support manufacturers and formulators in India.
+          INGRELIA offers a focused range of specialty ingredients designed to meet evolving performance, stability and sensory requirements across diverse application areas. We bring together ingredient expertise, reliable sourcing and technical understanding to support manufacturers and formulators.
         </p>
       </div>
 

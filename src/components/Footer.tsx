@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { PageId } from './Navbar';
+import { type PageId } from '../types/routes';
 import { COMPANY_DETAILS, APPLICATION_AREAS } from '../data/companyData';
 import { Mail, Globe } from 'lucide-react';
 

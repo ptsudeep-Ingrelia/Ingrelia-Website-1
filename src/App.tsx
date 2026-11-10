@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Navbar, PageId } from './components/Navbar';
+import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -12,40 +12,45 @@ import { ApplicationsPage } from './pages/ApplicationsPage';
 import { CustomerSolutionsPage } from './pages/CustomerSolutionsPage';
 import { CareersPage } from './pages/CareersPage';
 import { ContactPage } from './pages/ContactPage';
+import { PAGE_PATHS, parsePathToPage, type PageId } from './types/routes';
 import { EnquiryModal } from './components/EnquiryModal';
 import { EnquiryInspectorModal } from './components/EnquiryInspectorModal';
 import { ArrowUp } from 'lucide-react';
 
 export default function App() {
-  const [activePage, setActivePage] = useState<PageId>('home');
+  const [activePage, setActivePage] = useState<PageId>(() => {
+    if (typeof window !== 'undefined') {
+      return parsePathToPage(window.location.pathname, window.location.hash).page;
+    }
+    return 'home';
+  });
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
   const [initialApplication, setInitialApplication] = useState<string>('');
   const [initialCategory, setInitialCategory] = useState<string>('');
   const [isInspectorOpen, setIsInspectorOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Synchronize with URL hash on mount & popstate
+  // Synchronize with URL path on mount & popstate
   useEffect(() => {
-    const handleHashChange = () => {
-      const rawHash = window.location.hash.replace(/^#\/?/, '') as PageId;
-      const validPages: PageId[] = ['home', 'about', 'applications', 'solutions', 'careers', 'contact'];
-      if (validPages.includes(rawHash) && rawHash !== 'home') {
-        setActivePage(rawHash);
-      } else {
-        setActivePage('home');
-        // Clean trailing # from URL if visiting homepage with #
-        if (window.location.hash) {
-          window.history.replaceState(null, '', window.location.pathname + window.location.search);
-        }
+    const syncRouteFromLocation = () => {
+      const { page, shouldReplace, cleanPath } = parsePathToPage(
+        window.location.pathname,
+        window.location.hash
+      );
+      setActivePage(page);
+
+      // Clean up legacy hash or trailing slash in address bar without reload
+      if (shouldReplace || window.location.hash) {
+        window.history.replaceState(null, '', cleanPath + window.location.search);
       }
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    window.addEventListener('popstate', handleHashChange);
+    syncRouteFromLocation();
+    window.addEventListener('popstate', syncRouteFromLocation);
+    window.addEventListener('hashchange', syncRouteFromLocation);
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-      window.removeEventListener('popstate', handleHashChange);
+      window.removeEventListener('popstate', syncRouteFromLocation);
+      window.removeEventListener('hashchange', syncRouteFromLocation);
     };
   }, []);
 
@@ -60,13 +65,9 @@ export default function App() {
 
   const handleNavigate = (page: PageId) => {
     setActivePage(page);
-    if (page === 'home') {
-      // Use pushState to clear the hash completely without leaving a trailing #
-      if (window.location.hash) {
-        window.history.pushState(null, '', window.location.pathname + window.location.search);
-      }
-    } else {
-      window.location.hash = page;
+    const targetPath = PAGE_PATHS[page] || '/';
+    if (window.location.pathname !== targetPath || window.location.hash) {
+      window.history.pushState(null, '', targetPath);
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

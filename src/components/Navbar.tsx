@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
 import { Menu, X } from 'lucide-react';
 
-export type PageId = 'home' | 'about' | 'applications' | 'solutions' | 'careers' | 'contact';
+import { PAGE_PATHS, type PageId } from '../types/routes';
+export type { PageId } from '../types/routes';
 
 interface NavbarProps {
   activePage: PageId;

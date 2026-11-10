@@ -27,16 +27,26 @@ export default function App() {
   // Synchronize with URL hash on mount & popstate
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') as PageId;
+      const rawHash = window.location.hash.replace(/^#\/?/, '') as PageId;
       const validPages: PageId[] = ['home', 'about', 'applications', 'solutions', 'careers', 'contact'];
-      if (validPages.includes(hash)) {
-        setActivePage(hash);
+      if (validPages.includes(rawHash) && rawHash !== 'home') {
+        setActivePage(rawHash);
+      } else {
+        setActivePage('home');
+        // Clean trailing # from URL if visiting homepage with #
+        if (window.location.hash) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
       }
     };
 
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+    };
   }, []);
 
   // Track scroll for back-to-top button
@@ -50,7 +60,14 @@ export default function App() {
 
   const handleNavigate = (page: PageId) => {
     setActivePage(page);
-    window.location.hash = page === 'home' ? '' : page;
+    if (page === 'home') {
+      // Use pushState to clear the hash completely without leaving a trailing #
+      if (window.location.hash) {
+        window.history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    } else {
+      window.location.hash = page;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

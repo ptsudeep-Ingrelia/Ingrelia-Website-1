@@ -90,8 +90,7 @@ export const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
           Working on a Specific Formulation Brief?
         </h3>
         <p className="text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-          Share your target sensory feel, active benchmark, or stability specifications with INGRELIA.
-          Our team assists R&D chemists and procurement teams with relevant ingredient possibilities.
+          Share your target sensory profile, performance benchmarks or stability requirements with INGRELIA. Our team assists R&D and procurement teams with relevant ingredient possibilities.
         </p>
         <button
           onClick={() => onOpenConnectModal()}

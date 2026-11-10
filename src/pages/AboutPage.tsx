@@ -41,9 +41,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConnectM
           <p className="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed text-slate-100">
             Our purpose is to connect customers with the right specialty ingredients through a carefully selected portfolio, responsive service and a strong understanding of their needs.
           </p>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed pt-1">
-            Our initial focus spans skincare, haircare, sun care and personal hygiene, connecting ingredient manufacturers with the brands, formulators and businesses that turn ideas into finished products.
-          </p>
         </div>
       </div>
 
